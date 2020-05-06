@@ -99,7 +99,11 @@
         document.getElementById('pro-tip').innerHTML = condomFact;
 
         playButton.addEventListener('click', function(e){
-          loadGame();
+          if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+            loadGame();
+          } else {
+            alert("Sorry! Currently only mobile devices are supported!");
+          }
           displayGameOverMessage();
         });
 

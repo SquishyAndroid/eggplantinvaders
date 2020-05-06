@@ -10,10 +10,10 @@
     <title>EGGPLANT INVADERS</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link href="/stylesheets/all.css?v=2" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/lib/phaser.min.js" type="text/javascript"></script>
-    <script src="/javascripts/lib/cookies.min.js" type="text/javascript"></script>
-    <script src="/javascripts/lib/inline.min.js" type="text/javascript"></script>
+    <link href="public/stylesheets/all.css?v=2" rel="stylesheet" type="text/css" />
+    <script src="public/javascripts/lib/phaser.min.js" type="text/javascript"></script>
+    <script src="public/javascripts/lib/cookies.min.js" type="text/javascript"></script>
+    <script src="public/javascripts/lib/inline.min.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Orbitron:500,900" rel="stylesheet">
     <meta name="google-site-verification" content="eDtiXJYMmiwq81tJrcdh0FD9vjBqnYdORxvHNbwwn3c" />
     <meta name="robots" content="noindex, follow">
@@ -22,7 +22,7 @@
 
     <!-- DISPLAY CONDOM TIPS-->
     <div id="loader">
-      <p><img src="/images/loader.gif"></p>
+      <p><img src="public/images/loader.gif"></p>
       <br>
       <p class="light">Pro Tip</p>
       <p id="pro-tip"></p>
@@ -31,7 +31,7 @@
     <div id="game">
       <div id="home-screen">
         <div class="game-notification"></div>
-        <img id="game-logo" src="/images/peach.png">
+        <img id="game-logo" src="public/images/peach.png">
         <button id="play-game">PLAY</button>
       </div>
 
@@ -52,13 +52,13 @@
             <h1 id="new-score-secondary"></h1>
         </div>
 
-        <img id="ok-button" src="/images/play-again.png">
+        <img id="ok-button" src="public/images/play-again.png">
       </div>
 
     </div><!-- #game -->
-    <script src="/javascripts/preload.js" type="text/javascript"></script>
-    <script src="/javascripts/create.js" type="text/javascript"></script>
-    <script src="/javascripts/update.js" type="text/javascript"></script>
+    <script src="public/javascripts/preload.js" type="text/javascript"></script>
+    <script src="public/javascripts/create.js" type="text/javascript"></script>
+    <script src="public/javascripts/update.js" type="text/javascript"></script>
     <script>
         //PAGE LOADER
         let pageLoad;
@@ -105,10 +105,10 @@
 
         function displayGameOverMessage () {
           const gameOverAnimations = [
-              "/images/gotShot_gonorrhoea.gif",
-              "/images/gotShot_herpes.gif",
-              "/images/gotShot_noMoreSleep.gif",
-              "/images/gotShot_pregnant.gif",
+              "public/images/gotShot_gonorrhoea.gif",
+              "public/images/gotShot_herpes.gif",
+              "public/images/gotShot_noMoreSleep.gif",
+              "public/images/gotShot_pregnant.gif",
           ];
           const gameOverAnimation = gameOverAnimations[Math.floor(Math.random() * gameOverAnimations.length)];
           document.getElementById('game-over-message').innerHTML = `<img src="${gameOverAnimation}">`;
@@ -117,7 +117,7 @@
         //LOAD GAME FILE
         function loadGame () {
           let gameFile = document.createElement("script");
-          gameFile.setAttribute("src", "/javascripts/game.js");
+          gameFile.setAttribute("src", "public/javascripts/game.js");
           document.body.appendChild(gameFile);
         }
     </script>
